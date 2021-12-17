@@ -488,68 +488,90 @@ body {
     /*-----------------------  Footer:  -------------------------*/
 
     footer {
-        background-color: #1a1a1a;
-        display: flex;
-        justify-content: space-around;
-        height: 25rem;
+        background-color:  #1a1a1a; 
+        color: #eee; 
     }
 
-    footer span {color: #eee;}
-
-    .payment-methods img {
-        width: auto;
-        height: 40px;
-        padding-top: 6px;
+    section.info-dh {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .payment-methods {
-        margin: 0;
-        margin-top: 3rem;
+        margin: 3rem;
     }
 
     .payment-methods-title {
         font-weight: bold;
-        font-size: 1.5em;
-        padding-bottom: 0.5em;
+        font-size: 1.5rem;
+        cursor: default;
     }
 
     .payment-type {
-        display: flex;
-        gap: 3em;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        row-gap: 1.5rem;
+        column-gap: 2rem; 
+        padding-top: 1rem;
     }
 
-    .payment-column {
+    .payment-type  span {
         font-weight: bold;
-        font-size: 1em;
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
+        cursor: default;
     }
 
-    .social-networks {
-        display: flex;
-        flex-direction: column;
-        margin-top: 3rem;
-    }
-
-    .social-networks-title {
-        font-weight: bold;
-        font-size: 1.5em;
-        padding-bottom: 0.5em;
-
+    .payment-type img {
+        width: auto;
+        height: 35px;
+        padding-top: 7px;
     }
     
-    .social-networks-icons img {
-        width: auto;
-        height: 63px;
-    }
-
-    .social-networks-icons {
+    .networks-container {
         display: flex;
-        gap: 1.4em
+        flex-direction: column;
+        margin: 3rem;
+        align-items: center;
+        width: 40%;
     }
 
-    .security-seal img {
+    .social-networks span {
+        font-weight: bold;
+        font-size: 1.5em;
+        cursor: default;
+    }
+    .social-networks img {
         width: auto;
-        height: 40px;
+        height: 60px;
+    }
+
+    div.social-networks-icons {
+        display: inline-flex;
+        gap: 25px;
+        padding-top: 2rem;
+    }
+
+    div.security {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .security span {
+        font-weight: bold;
+        font-size: 1.5rem;
+        cursor: default;
+    }
+    .security img {
+        width: auto;
+        height: 45px;
+        padding-top: 20px;
+    }
+    
+    .copyright {
+        text-align: left;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        padding-bottom: 3rem;
     }

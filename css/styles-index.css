@@ -82,8 +82,7 @@ body {
     }
 
     /*-----------------  Header-center:  -------------------*/
-
-
+    
     .header-center {
         height: 7rem;
         display: flex;
@@ -157,7 +156,7 @@ body {
     }
 
     div.client-support {
-        margin-left: 1em;
+        margin-left: 0;
         margin-right: 1em;
         gap: 0.6em;
         cursor: pointer;
@@ -485,3 +484,43 @@ body {
 
 
     .teste-scroll {margin: 3rem; text-align: justify;}
+
+    footer {
+        background-color: #1a1a1a;
+        display: flex;
+        justify-content: space-between;
+        height: 25rem;
+    }
+
+    footer span {color: #eee;}
+
+    .payment-methods img {
+        width: 3em;
+        padding-top: 6px;
+    }
+
+    .payment-methods {
+        margin: 3rem;
+        margin-top: 2em;
+        height: 50%;
+    }
+
+    .payment-methods-title {
+        font-weight: bold;
+        font-size: 1.5em;
+        padding-bottom: 1em;
+        white-space: nowrap;
+    }
+
+    .payment-type {
+        display: flex;
+        gap: 4em;
+    }
+
+    .payment-column {
+        font-weight: bold;
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }

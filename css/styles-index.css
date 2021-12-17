@@ -514,7 +514,7 @@ body {
 
     .payment-type {
         display: flex;
-        gap: 4em;
+        gap: 3em;
     }
 
     .payment-column {

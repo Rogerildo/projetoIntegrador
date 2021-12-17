@@ -485,31 +485,32 @@ body {
 
     .teste-scroll {margin: 3rem; text-align: justify;}
 
+    /*-----------------------  Footer:  -------------------------*/
+
     footer {
         background-color: #1a1a1a;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         height: 25rem;
     }
 
     footer span {color: #eee;}
 
     .payment-methods img {
-        width: 3em;
+        width: auto;
+        height: 40px;
         padding-top: 6px;
     }
 
     .payment-methods {
-        margin: 3rem;
-        margin-top: 2em;
-        height: 50%;
+        margin: 0;
+        margin-top: 3rem;
     }
 
     .payment-methods-title {
         font-weight: bold;
         font-size: 1.5em;
-        padding-bottom: 1em;
-        white-space: nowrap;
+        padding-bottom: 0.5em;
     }
 
     .payment-type {
@@ -523,4 +524,32 @@ body {
         display: flex;
         flex-direction: column;
         gap: 2em;
+    }
+
+    .social-networks {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+
+    .social-networks-title {
+        font-weight: bold;
+        font-size: 1.5em;
+        padding-bottom: 0.5em;
+
+    }
+    
+    .social-networks-icons img {
+        width: auto;
+        height: 63px;
+    }
+
+    .social-networks-icons {
+        display: flex;
+        gap: 1.4em
+    }
+
+    .security-seal img {
+        width: auto;
+        height: 40px;
     }

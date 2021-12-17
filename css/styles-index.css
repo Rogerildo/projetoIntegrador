@@ -4,12 +4,11 @@ body {
     font-family: 'Montserrat', sans-serif;
         background-color: #eee;
     }
-
+    
     /*-----------------  Overheader:  -------------------*/
 
     header {
         background-color:#1a1a1a;
-
     }
 
     section.overheader {
@@ -91,7 +90,6 @@ body {
         width: 100%;
         justify-content: space-between;
         align-items: center;
-
     }
 
     .header-center div {
@@ -158,36 +156,47 @@ body {
         padding-top: 3px;
     }
 
-    div.header-options {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    .header-options nav {
-        display: inline-flex;
-        align-items: center;
-    }
-
-    .header-options img {width: 1.7em;}
-
-    .header-options a {
-        color: #eee;
-        text-decoration: none;
-        white-space: nowrap;
-        font-size: 1em;
-    }
-
-    .header-options nav div {gap: 0.7em;}
-
     div.client-support {
-        margin-left: 40px;
-        margin-right: 10px;
+        margin-left: 1em;
+        margin-right: 1em;
+        gap: 0.6em;
+        cursor: pointer;
+        padding: 0.9em;
+        transition: all 0.5s;
+        border-radius: 10px;
+        border: transparent;
     }
+
+    .client-support img {width: 1.7em}
+
+    .client-support a {
+        text-decoration: none;
+        color: white;
+        white-space: nowrap;
+    }
+
+    .client-support:hover { border: solid 1px #fad11b }
 
     div.login-signup {
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 1em;
+        margin-right: 1em;
+        gap: 0.6em;
+        cursor: pointer;
+        padding: 0.8em;
+        transition: all 0.5s;
+        border-radius: 10px;
+        border: transparent;
     }
+
+    .login-signup img {width: 1.7em}
+
+    .login-signup a {
+        text-decoration: none;
+        color: white;
+        white-space: nowrap;
+    }
+
+    .login-signup:hover { border: solid 1px #fad11b }
 
     .shopping-cart {
         position: relative;
@@ -201,8 +210,11 @@ body {
         bottom: 1px;
         -moz-transition: all 0.2s;
         -webkit-transition: all 0.2s;
-        transition: all 0.3s;    
+        transition: all 0.3s;  
     } 
+
+    div.shopping-cart {margin-right: 5em}
+
 
     .shopping-cart ul li {list-style: none;}
 
@@ -220,19 +232,6 @@ body {
         transform: scale(1.1);
     }
 
-    .settings ul li {list-style: none;}
-    .settings ul li a {text-decoration: none; color: white;}
-
-    .settings img {
-        width: 45px;
-        padding-right: 18px;
-        transition: all .3s;
-
-    }
-
-    .settings ul li img:hover {
-        transform: scale(1.1);
-    }
     hr#divider-to-categories {
         width: 100%;
         height: 4px;
@@ -404,7 +403,7 @@ body {
     }
 
     .slides {
-        width: 500rem;
+        /* width: 500rem; pra que?*/
         display: flex;
         position: relative;
     }
@@ -412,9 +411,10 @@ body {
     .slides a {cursor: initial;}
 
     .image img {
-        width: 90rem;
-        height: 17rem;
+        width: 90em;
+        height: 17em;
     }
+
     #atual {
         transition: all 0.5s;
     }

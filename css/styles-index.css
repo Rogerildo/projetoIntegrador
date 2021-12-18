@@ -3,6 +3,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #eee;
+    width: 100%;
 }
     
     /*-----------------  Overheader:  -------------------*/
@@ -391,7 +392,7 @@ hr#divider-to-categories {
     border-radius: 10px;
     transition: all 0.4s;
     margin: 3rem;
-    border: solid 2px #1a1a1a;
+    border: solid 1px #1a1a1ac5;
     position: relative;
 }
 
@@ -570,3 +571,85 @@ div.security {
     margin-right: 3rem;
     padding-bottom: 3rem;
  }
+
+ /* ----------------- Super promoções ------------------*/
+
+ .title-super-promotions {
+    margin-left: 4rem;
+    margin-right: 4rem;
+ }
+
+ .title-super-promotions span {
+    font-weight: bold;
+    text-transform: uppercase;
+ }
+
+ .title-super-promotions span::after{
+     content: '';
+     display: block;
+     height: 4px;
+     background-color: #c2a420;
+     width: 20%;
+     margin-top: 8px;
+     border-radius: 5px;
+ }
+
+ .title-super-promotions::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #1a1a1a3f;
+    width: 80%;
+    position: relative;
+    left: 20%;
+    bottom: 2px;
+    border-radius: 5px;
+ }
+
+.slider-promotions-container {
+    margin: 35px 0px 35px 0px;
+    padding: 0;
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    border-top: solid 5px #c2a420;
+    border-bottom: solid 5px #c2a420;
+}
+
+.image-slider {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.slides-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 30px 0px 30px;
+    transition: .7s;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+}
+
+.promotions-img {
+    position: relative;
+    width: auto;
+    height: 230px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.slides-div:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+
+}
+

@@ -532,13 +532,13 @@ section.info-dh {
 
 .social-networks span {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.3em;
     cursor: default;
 }
 
 .social-networks img {
     width: auto;
-    height: 60px;
+    height: 51px;
 }
 
 div.social-networks-icons {
@@ -555,7 +555,7 @@ div.security {
 
 .security span {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     cursor: default;
 }
 

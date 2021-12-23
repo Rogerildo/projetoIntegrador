@@ -651,7 +651,7 @@ div.security {
 
 .card-promotion:hover {
     border: solid 3px #189107;
-    transition: .5s;
+    transition: .2s;
 }
 
 .title-card-promotion {

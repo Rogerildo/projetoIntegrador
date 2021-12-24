@@ -12,7 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -161,6 +165,7 @@
 
     <main>
         <section class="container-carousel">
+
             <div class="carousel">
 
                 <div class="slides">
@@ -197,64 +202,7 @@
                 </div>
             </div>
 
-            <script>
-                var balls = document.querySelector('.balls')
-                var quant = document.querySelectorAll('.slides .image')
-                var atual = 0
-                var imagem = document.getElementById('atual')
-                var next = document.getElementById('next')
-                var back = document.getElementById('back')
-                var rolar = true
-
-                for (let i = 0; i < quant.length; i++) {
-                    var div = document.createElement('div')
-                    div.id = i
-                    balls.appendChild(div)
-                }
-                document.getElementById('0').classList.add('imgAtual')
-
-                var pos = document.querySelectorAll('.balls div')
-
-                for (let i = 0; i < pos.length; i++) {
-                    pos[i].addEventListener('click', () => {
-                        atual = pos[i].id
-                        rolar = false
-                        slide()
-                    })
-                }
-
-                back.addEventListener('click', () => {
-                    atual--
-                    rolar = false
-                    slide()
-                })
-                next.addEventListener('click', () => {
-                    atual++
-                    rolar = false
-                    slide()
-                })
-
-                function slide() {
-                    if (atual >= quant.length) {
-                        atual = 0
-                    }
-                    else if (atual < 0) {
-                        atual = quant.length - 1
-                    }
-                    document.querySelector('.imgAtual').classList.remove('imgAtual')
-                    imagem.style.marginLeft = -90 * atual + 'rem'
-                    document.getElementById(atual).classList.add('imgAtual')
-                }
-                setInterval(() => {
-                    if (rolar) {
-                        atual++
-                        slide()
-                    } else {
-                        rolar = true
-                    }
-                }, 5000)
-                slide()
-            </script>
+            <script type="text/javascript" src="script-index.js"></script>
 
         </section>
 
@@ -264,136 +212,237 @@
                 <span>Super promoções</span>
             </h1>
 
-            <div class="promotions-container">
+            <div class="cards-promotions-container">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
 
-                <div class="cards-promotions">
+                        <div class="swiper-slide card-promotion">
+                            <img src="img/games/slider-promotions/apex-legends-ps4.jpg" alt="Apex Legends PS4"
+                                class="promotions-img">
 
-                    <div class="card-promotion">
-                        <img src="img/games/slider-promotions/apex-legends-ps4.jpg" alt="Apex Legends PS4"
-                            class="promotions-img">
+                            <p class="title-card-promotion"> <b>APEX LEGENDS </b> </p>
 
-                        <p class="title-card-promotion"> <b>APEX LEGENDS </b> </p>
+                            <div class="price-card-promotions">
+                                <p class="oldPrice-card">De: R$79,99</p>
+                                <p class="priceUpdate-card">Por:</p>
+                                <p class="currentPrice-card">R$39,99</p>
+                            </div>
 
-                        <div class="price-card-promotions">
-                            <p class="oldPrice-card">De: R$79,99</p>
-                            <p class="priceUpdate-card">Por:</p>
-                            <p class="currentPrice-card">R$39,99</p> <!--50%-->
+                            <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
+                                <span>Comprar</span>
+                            </a>
+
+                            <div class="discount-card">
+                                <img src="img/icons/icon-promotion.svg">
+                                <span>50%</span>
+                            </div>
                         </div>
 
-                        <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
-                            <span>Comprar</span>
-                        </a>
+                        <div class="swiper-slide card-promotion">
+                            <img src="img/games/slider-promotions/dissidia-ps4.jpg" alt="Dissidia Final Fantasy"
+                                class="promotions-img">
 
-                        <div class="discount-card">
-                            <img src="img/icons/icon-promotion.svg">
-                            <span>50%</span>
+                            <p class="title-card-promotion"> DISSIDIA FINAL FANTASY </p>
+
+                            <div class="price-card-promotions">
+                                <p class="oldPrice-card">De: R$69,99</p>
+                                <p class="priceUpdate-card">Por:</p>
+                                <p class="currentPrice-card">R$49,99</p>
+                            </div>
+
+                            <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
+                                <span>Comprar</span>
+                            </a>
+
+                            <div class="discount-card">
+                                <img src="img/icons/icon-promotion.svg">
+                                <span>40%</span>
+                            </div>
                         </div>
+
+                        <div class="swiper-slide card-promotion">
+                            <img src="img/games/slider-promotions/battlefield-xbox.jpg" alt="Battlefield 2042"
+                                class="promotions-img">
+
+                            <p class="title-card-promotion"> BATTLEFIELD 2042 </p>
+
+                            <div class="price-card-promotions">
+                                <p class="oldPrice-card">De: R$199,99</p>
+                                <p class="priceUpdate-card">Por:</p>
+                                <p class="currentPrice-card">R$119,99</p>
+                            </div>
+
+                            <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
+                                <span>Comprar</span>
+                            </a>
+
+                            <div class="discount-card">
+                                <img src="img/icons/icon-promotion.svg">
+                                <span>40%</span>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide card-promotion">
+                            <img src="img/games/slider-promotions/dark-souls3-xbox.jpg" alt="Dark Souls III"
+                                class="promotions-img">
+
+                            <p class="title-card-promotion"> DARK SOULS III </p>
+
+                            <div class="price-card-promotions">
+                                <p class="oldPrice-card">De: R$79,99</p>
+                                <p class="priceUpdate-card">Por:</p>
+                                <p class="currentPrice-card">R$43,99</p>
+                            </div>
+
+                            <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
+                                <span>Comprar</span>
+                            </a>
+
+                            <div class="discount-card">
+                                <img src="img/icons/icon-promotion.svg">
+                                <span>45%</span>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide card-promotion">
+                            <img src="img/games/slider-promotions/assassins-creed-xbox.jpg" alt="Assassins Creed Unity"
+                                class="promotions-img">
+
+                            <p class="title-card-promotion"> ASSASSIN'S CREED UNITY </p>
+
+                            <div class="price-card-promotions">
+                                <p class="oldPrice-card">De: R$89,99</p>
+                                <p class="priceUpdate-card">Por:</p>
+                                <p class="currentPrice-card">R$62,99</p>
+                            </div>
+
+                            <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
+                                <span>Comprar</span>
+                            </a>
+
+                            <div class="discount-card">
+                                <img src="img/icons/icon-promotion.svg">
+                                <span>30%</span>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide card-promotion">
+                            <img src="img/games/slider-promotions/yakuza-ps4.jpg" alt="The Yakuza PS4"
+                                class="promotions-img">
+
+                            <p class="title-card-promotion"> THE YAKUZA </p>
+
+                            <div class="price-card-promotions">
+                                <p class="oldPrice-card">De: R$219,99</p>
+                                <p class="priceUpdate-card">Por:</p>
+                                <p class="currentPrice-card">R$87,99</p>
+                            </div>
+
+                            <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
+                                <span>Comprar</span>
+                            </a>
+
+                            <div class="discount-card">
+                                <img src="img/icons/icon-promotion.svg">
+                                <span>60%</span>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide card-promotion">
+                            <img src="img/games/slider-promotions/batman-ps4.jpg" alt="Bartman Arkman PS4"
+                                class="promotions-img">
+
+                            <p class="title-card-promotion"> BATMAN ARKRAM </p>
+
+                            <div class="price-card-promotions">
+                                <p class="oldPrice-card">De: R$89,99</p>
+                                <p class="priceUpdate-card">Por:</p>
+                                <p class="currentPrice-card">R$58,49</p>
+                            </div>
+
+                            <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
+                                <span>Comprar</span>
+                            </a>
+
+                            <div class="discount-card">
+                                <img src="img/icons/icon-promotion.svg">
+                                <span>35%</span>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide card-promotion">
+                            <img src="img/games/slider-promotions/sonic-xbox.jpg" alt="Sonic Colors XBOX ONE"
+                                class="promotions-img">
+
+                            <p class="title-card-promotion"> SONIC COLORS </p>
+
+                            <div class="price-card-promotions">
+                                <p class="oldPrice-card">De: R$199,99</p>
+                                <p class="priceUpdate-card">Por:</p>
+                                <p class="currentPrice-card">R$99,99</p>
+                            </div>
+
+                            <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
+                                <span>Comprar</span>
+                            </a>
+
+                            <div class="discount-card">
+                                <img src="img/icons/icon-promotion.svg">
+                                <span>50%</span>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide card-promotion">
+                            <img src="img/games/slider-promotions/cod-ps5.jpg" alt="Call of Duty"
+                                class="promotions-img">
+
+                            <p class="title-card-promotion"> CALL OF DUTY </p>
+
+                            <div class="price-card-promotions">
+                                <p class="oldPrice-card">De: R$179,99</p>
+                                <p class="priceUpdate-card">Por:</p>
+                                <p class="currentPrice-card">R$125,99</p>
+                            </div>
+
+                            <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
+                                <span>Comprar</span>
+                            </a>
+
+                            <div class="discount-card">
+                                <img src="img/icons/icon-promotion.svg">
+                                <span>25%</span>
+                            </div>
+                        </div>
+
                     </div>
-
-                    <div class="card-promotion">
-                        <img src="img/games/slider-promotions/dissidia-ps4.jpg" alt="Dissidia Final Fantasy"
-                            class="promotions-img">
-
-                        <p class="title-card-promotion"> DISSIDIA FINAL FANTASY </p>
-
-                        <div class="price-card-promotions">
-                            <p class="oldPrice-card">De: R$69,99</p>
-                            <p class="priceUpdate-card">Por:</p>
-                            <p class="currentPrice-card">R$49,99</p>  <!--40%-->
-                        </div>
-
-                        <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
-                            <span>Comprar</span>
-                        </a>
-
-                        <div class="discount-card">
-                            <img src="img/icons/icon-promotion.svg">
-                            <span>40%</span>
-                        </div>
-                    </div>
-
-                    <div class="card-promotion">
-                        <img src="img/games/slider-promotions/battlefield-xbox.jpg" alt="Battlefield 2042"
-                            class="promotions-img">
-
-                        <p class="title-card-promotion"> BATTLEFIELD 2042 </p>
-
-                        <div class="price-card-promotions">
-                            <p class="oldPrice-card">De: R$199,99</p>
-                            <p class="priceUpdate-card">Por:</p>
-                            <p class="currentPrice-card">R$119,99</p>  <!--40%-->
-                        </div>
-
-                        <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
-                            <span>Comprar</span>
-                        </a>
-
-                        <div class="discount-card">
-                            <img src="img/icons/icon-promotion.svg">
-                            <span>40%</span>
-                        </div>
-                    </div>
-
-                    <div class="card-promotion">
-                        <img src="img/games/slider-promotions/dark-souls3-xbox.jpg" alt="Dark Souls III"
-                            class="promotions-img">
-
-                        <p class="title-card-promotion"> DARK SOULS III </p>
-
-                        <div class="price-card-promotions">
-                            <p class="oldPrice-card">De: R$79,99</p>
-                            <p class="priceUpdate-card">Por:</p>
-                            <p class="currentPrice-card">R$43,99</p>  <!--45%-->
-                        </div>
-
-                        <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
-                            <span>Comprar</span>
-                        </a>
-
-                        <div class="discount-card">
-                            <img src="img/icons/icon-promotion.svg">
-                            <span>45%</span>
-                        </div>
-                    </div>
-
-                    <div class="card-promotion">
-                        <img src="img/games/slider-promotions/assassins-creed-xbox.jpg" alt="Assassins Creed Unity"
-                            class="promotions-img">
-
-                        <p class="title-card-promotion"> ASSASSIN'S CREED UNITY </p>
-
-                        <div class="price-card-promotions">
-                            <p class="oldPrice-card">De: R$89,99</p>
-                            <p class="priceUpdate-card">Por:</p>
-                            <p class="currentPrice-card">R$62,99</p>  <!--30%-->
-                        </div>
-
-                        <a href="txt/carrinho.txt" target="_blank" class="buy-btn">
-                            <span>Comprar</span>
-                        </a>
-
-                        <div class="discount-card">
-                            <img src="img/icons/icon-promotion.svg">
-                            <span>30%</span>
-                        </div>
-                    </div>
-
                 </div>
 
+                <div class="swiper-button-next" id="btn-next-promotions"></div>
+                <div class="swiper-button-prev" id="btn-left-promotions"></div>
+                <!-- <div class="swiper-pagination"></div> -->
+
+                <!-- Initialize Swiper -->
+                <script>
+                    var swiper = new Swiper(".mySwiper", {
+                        slidesPerView: 5,
+                        spaceBetween: 70,
+                        loop: true,
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                    });
+                </script>
             </div>
 
         </section>
 
     </main>
-
-    <section class="chat-container">
-        <a href="#" class="chat">
-            <strong>Precisa de<br>ajuda?</strong>
-            <img src="img/icons/Call-Service.png">
-        </a>
-    </section>
-
-    <br><br>
 
     <footer>
         <section class="info-dh">
@@ -492,6 +541,13 @@
             </p>
         </section>
     </footer>
+
+    <section class="chat-container">
+        <a href="#" class="chat">
+            <strong>Precisa de<br>ajuda?</strong>
+            <img src="img/icons/Call-Service.png">
+        </a>
+    </section>
 
 </body>
 

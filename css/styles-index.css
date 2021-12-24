@@ -314,6 +314,7 @@ hr#divider-to-categories {
     right: 1rem;
     bottom: 1rem;
     border-radius:12px;
+    z-index: 5;
 }
     
 .chat {
@@ -606,46 +607,57 @@ div.security {
     border-radius: 5px;
  }
 
-.promotions-container {
+.cards-promotions-container {
     margin: 35px 0px 35px 0px;
     padding: 0;
     width: 100%;
-    height: 28rem;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     background-color: #1a1a1a;
     border-top: solid 5px #c2a420;
     border-bottom: solid 5px #c2a420;
+    position: relative;
 }
 
-.cards-promotions-div {display: flex}
+.swiper {
+    width: 91%;
+    height: auto;
+    margin: 20px;
+}
 
-.cards-promotions{
-    margin: 0px 30px 0px 30px;
-    height: 25em;
-    align-items: center;
-    justify-content: space-around;
-    display: flex;
-    gap: 3rem;
+.swiper-slide {
     text-align: center;
-}
-
-.promotions-img {
-    width: 100%;
-    height: 15em;
+    /* font-size: 18px; */
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-promotion {
-    padding: 8px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4px;
+    justify-content: flex-start;
     background-color: #eee;
     border: solid 3px #c2a420;
     border-radius: 10px;
-    width: 14rem;
     position: relative;
 }
 
@@ -653,6 +665,20 @@ div.security {
     border: solid 3px #189107;
     transition: .2s;
 }
+
+.promotions-img {
+    width: 96%;
+    height: 16em;
+    padding-top: 4px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    padding-top: 4px;
+  }
 
 .title-card-promotion {
     font-size: 14px;
@@ -674,24 +700,23 @@ div.security {
 
 .priceUpdate-card {
     font-size: 11px;
-    padding-bottom: 2px;
 }
 
 .currentPrice-card {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: bold;
     padding-bottom: 5px;
 }
 
 .buy-btn {
     display: flex;
+    align-items: center;
+    justify-content: center;
     background: #189107;
     border: none;
     border-radius: 20px;
-    width: 80%;
-    height: 30px;
-    align-items: center;
-    justify-content: center;
+    width: 70%;
+    height: 28px;
     transition: .5s;
     -webkit-transition: .5s;
     -moz-transition: .5s;
@@ -700,6 +725,7 @@ div.security {
     color: white;
     font-size: 15px;
     margin-bottom: 4px;
+    position: relative;
 }
 
 .buy-btn:hover {
@@ -723,11 +749,21 @@ div.security {
     align-items: center;
     justify-content:start;
     right: 0;
-    bottom: 5.5em;
+    bottom: 4.5em;
 }
 
 .discount-card img {width: 15px;}
 
 .card-promotion:hover > .discount-card {
     display: flex;
+} 
+
+#btn-left-promotions {
+    position: absolute;
+    left: 20px;
+}
+
+#btn-next-promotions {
+    position: absolute;
+    right: 20px;
 }

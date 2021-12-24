@@ -761,11 +761,15 @@ div.security {
 #btn-left-promotions {
     position: absolute;
     left: 20px;
-    color: #e2bf23;
+    color: rgba(255, 255, 255, 0.377);
 }
+
+#btn-left-promotions:hover {color: #c2a420}
 
 #btn-next-promotions {
     position: absolute;
     right: 20px;
-    color: #e2bf23;
+    color: rgba(255, 255, 255, 0.377);
 }
+
+#btn-next-promotions:hover {color: #c2a420}

@@ -22,47 +22,36 @@
 <body>
     <header>
         <section class="overheader">
-            <ul>
-                <li>
-                    <a href="#">
-                        <h2>
-                            <img loading="lazy" src="img/icons/seguro-icon.svg">Segurança garantida
-                        </h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <h2>
-                            <img loading="lazy" id="entrega-imediata" src="img/icons/entrega-imediata.svg">Entrega
-                            imediata
-                        </h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:anacf04@outlook.com">
-                        <h2>
-                            <img loading="lazy" id="email" src="img/icons/send-email.svg">Envie-nos um e-mail
-                        </h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://wa.me/5511976070718" target="_blank">
-                        <h2>
-                            <img loading="lazy" id="whatsapp" src="img/icons/whatsapp_white.svg">Whatsapp
-                        </h2>
-                    </a>
-                </li>
-            </ul>
-            <div class="country-selection">
-                <img src="img/icons/brasil.png" alt="Brasil">
+            <div class="overheader-options">
+
+                <a href="#" id="segurancaGarantida">
+                    <img loading="lazy" src="img/icons/seguro-icon.svg" class="icon-overheader">Segurança garantida
+                </a>
+
+                <a href="#" id="entregaImediata">
+                    <img loading="lazy" src="img/icons/entrega-imediata.svg" class="icon-overheader">Entrega
+                    imediata
+                </a>
+
+                <a href="mailto:anacf04@outlook.com" id="send-email">
+                    <img loading="lazy" src="img/icons/send-email.svg" class="icon-overheader">Envie-nos um e-mail
+                </a>
+
+                <a href="https://wa.me/5511976070718" target="_blank" id="whatsapp">
+                    <img loading="lazy" src="img/icons/whatsapp_white.svg" class="icon-overheader">Whatsapp
+                </a>
             </div>
+
+            <div>
+                <img src="img/icons/brasil.png" alt="Brasil" id="country-origin">
+            </div>
+
         </section>
 
-        <hr id="divider-overheader">
 
         <section class="header-center">
 
-            <div id="logo">
+            <div class="dh-homePage">
                 <a href="index.html">
                     <img id="logo-dh" src="img/logo/logo-dh-yellow.png" alt="DH">
                     <span id="title-logo">GAMES</span>
@@ -70,28 +59,32 @@
             </div>
 
             <div class="search">
-                <div>
-                    <input type="text" name="search" placeholder="O que você está procurando?">
-                    <button>
-                        <img src="img/icons/lupa-cinza.svg" alt="Pesquisar">
-                    </button>
-                </div>
+                <input type="text" name="search" placeholder="O que você está procurando?">
+                <button><a href="#">
+                        <img src="img/icons/lupa-cinza.svg" alt="Pesquisar"> </a>
+                </button>
             </div>
 
-            <div class="client-support">
-                <img src="img/icons/support-icon.png">
-                <a href="#">Suporte ao cliente</a>
+            <div class="support">
+                <a href="#">
+                    <img src="img/icons/support-icon.png" class="icon-header">
+                    Suporte ao cliente
+                </a>
             </div>
 
-            <div class="login-signup">
-                <img src="img/icons/login-icon.png">
-                <a href="#">Faça seu login <br> ou cadastre-se</a>
+            <div class="login">
+                <a href="#">
+                    <img src="img/icons/login-icon.png" class="icon-header">
+                    Faça seu login <br> ou cadastre-se
+                </a>
             </div>
 
             <div class="shopping-cart">
                 <ul>
-                    <li><a href="txt/carrinho.txt">
-                            <img src="img/icons/outline-shopping-cart.png" alt="Carrinho"> </a>
+                    <li>
+                        <a href="txt/carrinho.txt">
+                            <img src="img/icons/outline-shopping-cart.png" alt="Carrinho">
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -161,6 +154,7 @@
                 </ul>
             </nav>
         </section>
+
     </header>
 
     <main>

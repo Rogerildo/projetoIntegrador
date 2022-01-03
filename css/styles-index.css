@@ -538,70 +538,113 @@ hr#divider-to-categories {
 
 /*-----------------  Categorias:  -------------------*/
 
-.categories ul {
+.nav-bar {
     margin: 0;
     padding: 0;
-    display: flex;
+    width: 100%;
+    height: auto;
 }
 
-.categories ul li {
-    background-color: #1a1a1a   ;
+.categorias {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+}
+
+.categorias li {
     list-style: none;
     width: 100%;
-    height: 44px;
-    text-align: center;
-    font-size: 17px;
-    line-height: 44px;
-    font-weight: bold;
-    justify-content: space-around;    
+    height: 100%;
 }
 
-.categories ul li a {
+.categorias a {
     color: white;
     text-decoration: none;
+    font-size: 17px;
     text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
 }
 
-.categories ul li:hover {
+.categorias li:hover {
     background-color: #fad11b;
-    color: black;
-    -moz-transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-    font-size: 16.4px;
+    transition: all .3s;
 }
 
-.categories ul li:hover > a {
-    color: black;
+.categorias li:hover > a {
+    color: #1a1a1a;
 }
 
-.categories ul ul {
-    flex-direction: column;
+.sub-categorias {
     display: none;
 }
 
-.categories ul li:hover > ul {
+.categorias li:hover > ul {
     display: block;
+    background-color: #1a1a1a;
+    z-index: 2;
 }
 
-.categories ul ul li {
+.sub-categorias li a {
+    width: auto;
+    height: 2.2rem;
     font-size: 15px;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-.categories ul ul li:hover {
-    transition: .4s;
-    background-color: #fad11b;
-    font-size: 14.3px;
     text-align: center;
 }
 
-.categories {
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.247);
+.sub-categorias li:hover {
+    transition: all .4s;
 }
 
+@media (max-width: 1075px) {
+    .categorias { 
+        height: 36px;
+        transition: all .4s; 
+    }
+    .categorias a { 
+        font-size: 15px; 
+        transition: all .4s; 
+    }
+    .sub-categorias li a {
+        height: 2rem;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 915px) {
+    .categorias { 
+        height: 30px;
+        transition: all .4s; 
+    }
+    .categorias a { 
+        font-size: 13px; 
+        transition: all .4s; 
+    }
+    .sub-categorias li a {
+        height: 1.7rem;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 747px) {
+    .categorias { 
+        height: 27px;
+        transition: all .4s; 
+    }
+    .categorias a { 
+        font-size: 10px; 
+        transition: all .4s; 
+    }
+    .sub-categorias li a {
+        height: 1.6rem;
+        font-size: 9px;
+    }
+}
 
 
 /*-----------------  Chat-container:  -------------------*/

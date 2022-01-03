@@ -140,7 +140,8 @@ section.header-center {
     width: 100%;
     height: 7rem;
     margin: 0;
-    padding: 0
+    padding: 0;
+    gap: 10px;
 }
 
 .header-center a {
@@ -211,7 +212,7 @@ div.support { margin: 1rem}
     white-space: nowrap;
 }
 
-.support a:hover {
+.support:hover {
     border: solid 1px #fad11b;
     border-radius: 10px;
 }
@@ -225,7 +226,7 @@ div.support { margin: 1rem}
     white-space: nowrap;
 }
 
-.login a:hover {
+.login:hover {
     border: solid 1px #fad11b;
     border-radius: 10px;
 }
@@ -283,9 +284,11 @@ div.shopping-cart {
         font-size: 15px;
         transition: .3s;
     }
+   
     .support a {
         font-size: 14px;
         transition: .3s;
+        padding: 10px;
     }
     .icon-header {
         width: auto;
@@ -295,6 +298,7 @@ div.shopping-cart {
     .login a {
         font-size: 14px;
         transition: .3s;
+        padding: 10px;
     }
     div.shopping-cart {
         margin-right: 2rem;
@@ -587,18 +591,22 @@ hr#divider-to-categories {
 .categorias li:hover > ul {
     display: block;
     background-color: #1a1a1a;
-    z-index: 2;
 }
 
 .sub-categorias li a {
     width: auto;
-    height: 2.2rem;
+    height: 2.4rem;
     font-size: 15px;
     text-align: center;
 }
 
 .sub-categorias li:hover {
     transition: all .4s;
+}
+ 
+.nav-bar ul ul { 
+    position: relative;
+    z-index: 5;
 }
 
 @media (max-width: 1075px) {
@@ -611,7 +619,7 @@ hr#divider-to-categories {
         transition: all .4s; 
     }
     .sub-categorias li a {
-        height: 2rem;
+        height: 2.2rem;
         font-size: 14px;
     }
 }
@@ -626,7 +634,7 @@ hr#divider-to-categories {
         transition: all .4s; 
     }
     .sub-categorias li a {
-        height: 1.7rem;
+        height: 1.8rem;
         font-size: 10px;
     }
 }
@@ -821,103 +829,13 @@ hr#divider-to-categories {
 
 .teste-scroll {margin: 3rem; text-align: justify;}
 
-/*-----------------------  Footer:  -------------------------*/
-
-footer {
-    background-color:  #1a1a1a; 
-    color: #eee; 
-}
-
-section.info-dh {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.payment-methods {
-    margin: 3rem;
-}
-
-.payment-methods-title {
-    font-weight: bold;
-    font-size: 1.5rem;
-    cursor: default;
-}
-
-.payment-type {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    row-gap: 1.5rem;
-    column-gap: 2rem; 
-    padding-top: 1rem;
-}
-
-.payment-type  span {
-    font-weight: bold;
-    cursor: default;
-}
-
-.payment-type img {
-    width: auto;
-    height: 35px;
-    padding-top: 7px;
-}
-    
-.networks-container {
-    display: flex;
-    flex-direction: column;
-    margin: 3rem;
-    align-items: center;
-    width: 40%;
-}
-
-.social-networks span {
-    font-weight: bold;
-    font-size: 1.3em;
-    cursor: default;
-}
-
-.social-networks img {
-    width: auto;
-    height: 51px;
-}
-
-div.social-networks-icons {
-    display: inline-flex;
-    gap: 25px;
-    padding-top: 2rem;
-}
-
-div.security {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.security span {
-    font-weight: bold;
-    font-size: 1.3rem;
-    cursor: default;
-}
-
-.security img {
-    width: auto;
-    height: 45px;
-    padding-top: 20px;
-}
-    
-.copyright {
-    text-align: left;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    padding-bottom: 3rem;
- }
 
  /* ----------------- title das sections ------------------*/
 
  .title-sections {
     margin-left: 4rem;
     margin-right: 4rem;
+    margin-top: 1rem;
  }
 
  .title-sections span {
@@ -950,7 +868,7 @@ div.security {
   /* ----------------- Super promoções ------------------*/
 
 .cards-promotions-container {
-    margin: 35px 0px 35px 0px;
+    margin: 35px 0px 20px 0px;
     padding: 0;
     width: 100%;
     height: 100%;
@@ -1200,3 +1118,95 @@ div.security {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
 }
+
+/*-----------------------  Footer:  -------------------------*/
+
+footer {
+    background-color:  #1a1a1a; 
+    color: #eee; 
+}
+
+section.info-dh {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.payment-methods {
+    margin: 3rem;
+}
+
+.payment-methods-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: default;
+}
+
+.payment-type {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    row-gap: 1.5rem;
+    column-gap: 2rem; 
+    padding-top: 1rem;
+}
+
+.payment-type  span {
+    font-weight: bold;
+    cursor: default;
+}
+
+.payment-type img {
+    width: auto;
+    height: 35px;
+    padding-top: 7px;
+}
+    
+.networks-container {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    align-items: center;
+    width: 40%;
+}
+
+.social-networks span {
+    font-weight: bold;
+    font-size: 1.3em;
+    cursor: default;
+}
+
+.social-networks img {
+    width: auto;
+    height: 51px;
+}
+
+div.social-networks-icons {
+    display: inline-flex;
+    gap: 25px;
+    padding-top: 2rem;
+}
+
+div.security {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.security span {
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: default;
+}
+
+.security img {
+    width: auto;
+    height: 45px;
+    padding-top: 20px;
+}
+    
+.copyright {
+    text-align: left;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-bottom: 3rem;
+ }

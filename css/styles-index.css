@@ -146,7 +146,6 @@ section.header-center {
 
 .header-center a {
     text-decoration: none;
-    color: white;
 }
 
 .dh-homePage {
@@ -167,6 +166,7 @@ section.header-center {
 .dh-homePage span {
     font-size: 30px;
     font-weight: 500;
+    color: white;
 }
 
 div.search {
@@ -210,6 +210,7 @@ div.support { margin: 1rem}
     text-align: left;
     font-size: 16px;
     white-space: nowrap;
+    color: white;
 }
 
 .support:hover {
@@ -224,6 +225,7 @@ div.support { margin: 1rem}
     padding: 10px;
     font-size: 16px;
     white-space: nowrap;
+    color: white;
 }
 
 .login:hover {
@@ -366,7 +368,7 @@ div.shopping-cart {
         transition: all .5s;
     }
     div.dh-homePage {
-        margin-left: 2rem;
+        margin-left: 3rem;
     }
     .dh-homePage {
         margin-left: 2rem;
@@ -384,9 +386,9 @@ div.shopping-cart {
         transition: .3s;
     }
     div.search {
-        padding: 6px;
+        padding: 7px;
         transition: all .3s;
-        min-width: 12.5rem;
+        min-width: 13rem;
     }
     .search input {
         font-size: 12px;
@@ -396,32 +398,25 @@ div.shopping-cart {
         width: 20px;
         transition: .3s;
     }
-    div.support {
-        margin-left: 5px;
-        margin-right: 0;
-        transition: all .3s;
-    }
-    .support a {
-        font-size: 12px;
-        transition: .3s;
-    }
+    .support { display: none;}
+
     .icon-header {
         width: auto;
         height: 23px;
         transition: .3s;
     }
     .login a {
-        font-size: 12px;
+        font-size: 15px;
         transition: .3s;
     }
     div.shopping-cart {
-        margin-right: 1rem;
-        margin-left: 10px;
+        margin-right: 3rem;
+        margin-left: 2rem;
         padding: 7px
     }
     .shopping-cart img {
         width: auto;
-        height: 20px;
+        height: 25px;
         transition: .3s;
     }
 }
@@ -449,11 +444,11 @@ div.shopping-cart {
     
     /*  voltando pro header */
     section.header-center {
-        height: 4.4rem;
+        height: 4.5rem;
         transition: all .5s;
     }
     .dh-homePage {
-        margin-left: 5rem;
+        margin-left: 3rem;
         margin-right: 1rem;
         transition: .4s;
     }
@@ -472,28 +467,14 @@ div.shopping-cart {
         transition: all .3s;
         min-width: 9.3rem;
     }
-    /* .search input::placeholder {
-        color: white;
-        transition: .1s;
-    } */
     
     .search input {
-        font-size: 9px;
+        font-size: 12px;
     }
 
     .search button img {
         width: 20px;
         transition: .3s;
-    }
-    div.support {
-        margin-left: 5px;
-        margin-right: 0;
-        transition: all .3s;
-    }
-    .support a {
-        font-size: 10px;
-        transition: .3s;
-        white-space: normal;
     }
     .icon-header {
         width: auto;
@@ -501,7 +482,7 @@ div.shopping-cart {
         transition: .3s;
     }
     .login a {
-        font-size: 10px;
+        font-size: 12px;
         transition: .3s;
         padding-left: 0;
     }
@@ -515,6 +496,181 @@ div.shopping-cart {
         transition: .3s;
     }
 }
+
+@media (max-width: 630px) {
+    .dh-homePage span { display: none;}
+
+    div.dh-homePage {
+        margin-left: 2rem;
+        margin-right: 0;
+    }
+    .support { display: none};
+
+    div.shopping-cart { margin-right: 2rem;}
+
+    div.search { min-width: 10rem; width: 13rem;}
+    .search input { font-size: 10px;}
+}
+
+.checkbtn {
+    font-size: 25px;
+    color: #fff;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+#check-nav {
+    display: none;
+}
+
+.categorias-hidden {
+    display: none;
+    position: absolute;
+    top: 5.6rem;
+    border-top: solid 2px #fad11b;
+    background-color: #1a1a1a;
+    width: 100%;
+    height: auto;
+}
+
+.categorias-hidden div {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.11);
+}
+
+.categorias-hidden div:hover {
+    background-color: #fad11b;
+}
+
+.categorias-hidden div a:hover {
+    background-color: #c2a420;
+}
+
+.categorias-hidden div div {
+    width: 100%;
+    height: 100%;
+}
+
+.categorias-hidden label {
+    height: 1.5rem;
+    padding-top: 5px;
+}
+
+.categorias-hidden a {
+    display: none;
+    font-size: 13px;
+    padding: 5px;
+    color: black;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+}
+
+.checkbtn2 i { display: none;}
+.checkbtn2 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.checkbtn2:hover { color: black;}
+
+#check-mobile:checked ~ div a:hover{background-color: #dfba16;}
+#check-mobile:checked ~ div a{ display: block; background-color: #fad11b;}
+#check-mobile:checked ~ label { background-color: #e7c116; color: black;}
+
+#check-jogosPC:checked ~ div a { display: block; background-color: #fad11b;}
+#check-jogosPC:checked ~ div a:hover{background-color: #dfba16;}
+#check-jogosPC:checked ~ label { background-color: #e7c116; color: black;}
+
+#check-playstation:checked ~ div a:hover{background-color: #dfba16}
+#check-playstation:checked ~ div a { display: block; background-color: #fad11b;}
+#check-playstation:checked ~ label { background-color: #e7c116; color: black;}
+
+#check-xbox:checked ~ div a:hover{background-color: #dfba16}
+#check-xbox:checked ~ div a { display: block; background-color: #fad11b;}
+#check-xbox:checked ~ label { background-color: #e7c116; color: black;}
+
+#check-steam:checked ~ div a:hover{background-color: #dfba16;}
+#check-steam:checked ~ div a { display: block; background-color: #fad11b;}
+#check-steam:checked ~ label { background-color: #e7c116; color: black;}
+
+#check-gift:checked ~ div a:hover{background-color: #dfba16;}
+#check-gift:checked ~ div a { display: block; background-color: #fad11b;}
+#check-gift:checked ~ label { background-color: #e7c116; color: black;}
+
+#check-mobile, #check-jogosPC, #check-playstation,
+#check-xbox, #check-steam, #check-gift { display: none;}
+
+
+@media (max-width: 525px) {
+    div.dh-homePage { margin-left: 1rem;}
+    .dh-homePage span { display: none;}
+
+    section.header-center { gap: 12px;}
+
+    .search {
+        min-width: 8rem;
+    }
+
+    .login { display: none;}
+
+    div.shopping-cart { margin-right: 5px; }
+
+    .shopping-cart img { height: 22px;}
+
+    .checkbtn {
+        display: block;
+    }
+
+    .nav-bar ul { display: none}
+    #divider-to-categories { display: none;}
+
+    #check-nav:checked ~ nav { display: block;}
+}
+
+
+@media (max-width: 350px) {
+    div.dh-homePage {
+        margin: 0;
+        margin-left: 10px;
+    }
+    .dh-homePage img {
+        width: auto;
+        height: 33px
+    }
+    .search input::placeholder {
+        color: transparent;
+    }
+    div.search {
+        min-width: 5rem;
+    }
+    .shopping-cart img {
+        height: 15px;
+    }
+    .checkbtn {font-size: 17px;}
+}
+
+@media (max-width: 315px) {
+    .categorias-hidden {
+        top: 4rem;
+        transition: all .5s;
+    }
+    .categorias-hidden label { height: 1.2rem;}
+    .categorias-hidden a { font-size: 10px; }
+    .checkbtn2 { font-size: 13px; }
+}
+
+
+/* -------------------------------*/
 
 hr#divider-to-categories {
     width: 100%;
@@ -624,7 +780,7 @@ hr#divider-to-categories {
     }
 }
 
-@media (max-width: 915px) {
+@media (max-width: 850px) {
     .categorias { 
         height: 30px;
         transition: all .4s; 
@@ -641,11 +797,11 @@ hr#divider-to-categories {
 
 @media (max-width: 747px) {
     .categorias { 
-        height: 27px;
+        height: 29px;
         transition: all .4s; 
     }
     .categorias a { 
-        font-size: 10px; 
+        font-size: 12px; 
         transition: all .4s; 
     }
     .sub-categorias li a {
@@ -654,77 +810,6 @@ hr#divider-to-categories {
     }
 }
 
-
-/*-----------------  Chat-container:  -------------------*/
-
-.chat-container{
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    border-radius:12px;
-    z-index: 5;
-}
-    
-.chat {
-    align-items: center;
-    display: flex;
-    justify-content: flex-end;
-    text-decoration: none;
-    color: black;
-    /* font-weight: bold;  é necessario? o texto está numa strong */  
-    border-radius: 14px;
-    width: 60px;  /* pra que?--------------- */
-    transition: all .3s;
-    /* position: relative; */
-    background: none;
-}
-      
-.chat img {
-    width: 60px;
-    margin-left: 5px;  /* pra que?--------------- */
-}
-       
-.chat strong {
-    opacity: 0;
-    width: 0;
-    background-color: none;
-    color: black;
-    text-align: center;
-    font-size: 14px;
-    line-height: 17px;
-    padding-right: 10px;
-    transition: opacity .3s;
-    transition-delay: .2s;
-    transition-timing-function: ease-out;  
-    /* position: absolute; */
-    /* left: 100%;   pra que?--------------- */
-    /* font-weight: bold;  é necessario? o texto está numa strong */
-    /* padding-left: 10px; */        
-}
-    
-.chat:hover{
-    border: solid 2px #e2bf23; 
-    width: 165px;
-    background: #eee;
-}
-    
-.chat:hover strong{
-    animation-name:  slideChat;
-    animation-duration: .3s;
-    animation-fill-mode: forwards;
-    opacity: 1;
-}
-    
-@keyframes slideChat {
-    from{
-        left: 100%;
-        width: 0;
-    }
-    to{
-        left: 0;
-        width: initial;
-    }
-}
 
 /*-------------  Carrossel de imagens:  -------------*/
 
@@ -1210,3 +1295,76 @@ div.security {
     margin-right: 3rem;
     padding-bottom: 3rem;
  }
+
+
+
+ /*-----------------  Chat-container:  -------------------*/
+
+.chat-container{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    border-radius:12px;
+    z-index: 5;
+}
+    
+.chat {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: black;
+    /* font-weight: bold;  é necessario? o texto está numa strong */  
+    border-radius: 14px;
+    width: 60px;  /* pra que?--------------- */
+    transition: all .3s;
+    /* position: relative; */
+    background: none;
+}
+      
+.chat img {
+    width: 60px;
+    margin-left: 5px;  /* pra que?--------------- */
+}
+       
+.chat strong {
+    opacity: 0;
+    width: 0;
+    background-color: none;
+    color: black;
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    padding-right: 10px;
+    transition: opacity .3s;
+    transition-delay: .2s;
+    transition-timing-function: ease-out;  
+    /* position: absolute; */
+    /* left: 100%;   pra que?--------------- */
+    /* font-weight: bold;  é necessario? o texto está numa strong */
+    /* padding-left: 10px; */        
+}
+    
+.chat:hover{
+    border: solid 2px #e2bf23; 
+    width: 165px;
+    background: #eee;
+}
+    
+.chat:hover strong{
+    animation-name:  slideChat;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+    
+@keyframes slideChat {
+    from{
+        left: 100%;
+        width: 0;
+    }
+    to{
+        left: 0;
+        width: initial;
+    }
+}

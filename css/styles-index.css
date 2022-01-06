@@ -938,17 +938,18 @@ hr#divider-to-categories {
 .teste-scroll {margin: 3rem; text-align: justify;}
 
 
- /* ----------------- title das sections ------------------*/
+ /* ----------------- titulo das sections ------------------*/
 
  .title-sections {
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
     margin-top: 1rem;
  }
 
  .title-sections span {
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 25px;
  }
 
  .title-sections span::after{
@@ -956,7 +957,7 @@ hr#divider-to-categories {
      display: block;
      height: 4px;
      background-color: #c2a420;
-     width: 20%;
+     width: 30%;
      margin-top: 8px;
      border-radius: 5px;
  }
@@ -966,12 +967,36 @@ hr#divider-to-categories {
     display: block;
     height: 1px;
     background-color: #1a1a1a3f;
-    width: 80%;
+    width: 70%;
     position: relative;
-    left: 20%;
+    left: 30%;
     bottom: 2px;
     border-radius: 5px;
  }
+
+ @media (max-width: 1090px) {
+     .title-sections span { font-size: 20px; transition: .5s;}
+ }
+
+ @media (max-width: 690px) {
+    .title-sections span { font-size: 17px; transition: .5s;}
+ }
+
+ @media (max-width: 745px) {
+    .title-sections span::after{ width: 40%; transition: .5s;}
+    .title-sections::after {width: 60%; left: 40%; transition: .5s; }
+
+ }
+
+ @media (max-width: 535px) {
+    .title-sections {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        transition: .5s;
+     }    
+ }
+
+
 
   /* ----------------- Super promoções ------------------*/
 
@@ -1148,9 +1173,9 @@ hr#divider-to-categories {
  .populares-grid-container {
     display: grid;
     justify-content: space-around;
-    grid-template-columns: auto auto auto auto auto;
-    padding: 1rem 3rem 1rem 3rem;
- }
+    grid-template-columns: repeat(5, 1fr);
+    margin: 1rem 2rem 1rem 2rem;
+}
 
 .populares-grid-item {
     padding: 20px;
@@ -1167,7 +1192,7 @@ hr#divider-to-categories {
 .populares-grid-item img {
     border-radius: 13px;
     width: auto;
-    height: 16ch;
+    height: 9rem;
 }
 
 .populares-grid-item a {
@@ -1179,6 +1204,28 @@ hr#divider-to-categories {
     padding-top: 3px;
     font-size: 15px;
     font-weight: 200px;
+}
+
+@media (max-width: 415px) {
+    div.populares-grid-item a img { height: 4rem;}
+    div.populares-grid-item a p { font-size: 10px;}
+}
+
+@media (max-width: 690px) {
+    .populares-grid-container { grid-template-columns: repeat(3, 1fr); }
+    .populares-grid-item { padding: 10px; }    
+}
+
+@media (max-width: 850px)  {
+   div.populares-grid-item img { height: 6rem; }
+   .populares-grid-item p { font-size: 13px; transition: .5s; }
+}
+
+@media (max-width: 1090px) {
+    .populares-grid-item img {
+        height: 8rem;
+        transition: all .5s;
+    }
 }
 
  /* ----------------- Lançamentos ------------------*/
@@ -1274,6 +1321,7 @@ section.info-dh {
     margin-top: 3rem;
     align-items: center;
     width: 40%;
+    gap: 7px;
 }
 
 #social-networks-title {

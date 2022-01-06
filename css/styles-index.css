@@ -1271,7 +1271,7 @@ section.info-dh {
     display: flex;
     flex-direction: column;
     margin: 3rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     align-items: center;
     width: 40%;
 }
@@ -1324,23 +1324,40 @@ div.security {
 
  .copyright p { font-size: 15px;}
 
+@media (min-width: 1900px) {
+    #payment-methods-title { font-size: 27px; transition: .5s;}
+    #social-networks-title { font-size: 27px; transition: .5s;}
 
- @media (max-width: 1090px) {
+    .payment-type span { font-size: 20px; transition: .5s;}
+    .payment-type img { height: 40px; transition: .5s;}
+
+    .secondContainer-footer { gap: 10px; transition: .5s;}
+
+    div.social-networks-icons {gap: 2em; transition: .5s;}
+    .social-networks img { height: 55px; transition: .5s; transition: .5s;}
+
+    .security span { font-size: 25px; transition: .5s; }
+    .security img { height: 50px; transition: .5s;}
+
+    .copyright p { font-size: 18px; transition: .5s;}
+}
+
+@media (max-width: 1090px) {
     #payment-methods-title { font-size: 20px; transition: .5s;}
     #social-networks-title { font-size: 20px; transition: .5s;}
 
     .payment-type span { font-size: 15px; transition: .5s;}
     .payment-type img { height: 30px; transition: .5s;}
-    
+
     div.social-networks-icons {gap: 1.4em;}
     .social-networks img { height: 45px; transition: .5s;}
 
     .security span { font-size: 18px; transition: .5s;}
 
     .copyright p { font-size: 13px;}
- }
+}
 
- @media (max-width: 1012px) {
+@media (max-width: 1012px) {
     #payment-methods-title { font-size: 16px; transition: .5s;}
     #social-networks-title { font-size: 16px; transition: .5s;}
 
@@ -1354,12 +1371,10 @@ div.security {
     .security img { height: 30px; transition: .5s;}
 
     .copyright p { font-size: 11px;}
- }
+}
 
- @media (max-width: 870px) {
+@media (max-width: 870px) {
     .firstContainer-footer { margin: 2rem; transition: .5s;}
-    .secondContainer-footer {  margin: 2rem; width: 50%; transition: .5s; }
-    .copyright { padding-bottom: 1rem; margin-left: 2rem; margin-right: 2rem; transition: .5s;}
 
     #payment-methods-title { font-size: 14px; transition: .5s;}
     #social-networks-title { font-size: 14px; transition: .5s;}
@@ -1367,6 +1382,7 @@ div.security {
     .payment-type span { font-size: 10px; transition: .5s;}
     .payment-type img { height: 22px; transition: .5s;}
 
+    .secondContainer-footer {  margin: 2rem; margin-top: 3rem; width: 50%; transition: .5s; }
     div.social-networks-icons {gap: 1rem;}
     .social-networks img { height: 35px; transition: .5s;}
 
@@ -1374,9 +1390,10 @@ div.security {
     .security img { height: 25px; transition: .5s;}
 
     .copyright p { font-size: 11px;}
- }
+    .copyright { padding-bottom: 1rem; margin-left: 2rem; margin-right: 2rem; transition: .5s;}
+}
 
- @media (max-width: 720px) {
+@media (max-width: 720px) {
     #payment-methods-title { font-size: 12px; transition: .5s;}
     #social-networks-title { font-size: 12px; transition: .5s;}
 
@@ -1389,13 +1406,13 @@ div.security {
     }
     .payment-type span { font-size: 9px; transition: .5s;}
     .payment-type img { height: 20px; transition: .5s;}
-    
-    .secondContainer-footer { margin-top: 1rem;}
+
+    .secondContainer-footer { margin-top: 2rem;}
     div.social-networks-icons {gap: 1rem;}
     .social-networks img { height: 28px; transition: .5s;}
 
     .security span { font-size: 12px; transition: .5s;}
-    .security img { height: 20px; transition: .5s;}
+    .security img { height: 23px; transition: .5s;}
 
     .copyright p { font-size: 9px;}
 }
@@ -1419,7 +1436,7 @@ div.security {
     .social-networks img { height: 25px; transition: .5s;}
 
     .security span { font-size: 12px;}
-    .security img { height: 25px; }
+    .security img { height: 23px; }
 }
 
 @media (max-width: 535px) {
@@ -1427,6 +1444,7 @@ div.security {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    
     }
 
     #payment-methods-title { font-size: 15px; }

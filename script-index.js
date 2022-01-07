@@ -58,3 +58,63 @@ setInterval(() => {
 slide()
 
 
+
+// Carrossel de imagens
+var counter = 1;
+setInterval(function(){
+    document.getElementById('radio' + counter + '-carousel').checked = true;
+    counter++;
+    if(counter > 4) {
+        counter = 1
+    }
+}, 4000);
+
+
+// Cards promotions (section Super Promoções)
+$('.cards-promotions-container').slick({
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 2,
+    responsive: [
+        {
+            breakpoint: 1050,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 2,
+                infinite: false,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                infinite: false,
+            }
+        },
+        {
+            breakpoint: 540,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: false,
+            }
+        },
+        {
+            breakpoint: 350,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: false,
+            }
+        },
+    ]
+});
+
+
+
+
+
